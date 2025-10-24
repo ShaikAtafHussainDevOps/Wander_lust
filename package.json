@@ -3,7 +3,7 @@
     "concurrently": "^8.2.2"
   },
   "scripts": {
-    "start-frontend": "cd frontend && npm run dev",
+    "start-frontend": "cd frontend && npm run dev -- --host 0.0.0.0",
     "start-backend": "cd backend && npm start",
     "start": "concurrently -n \"FRONTEND,BACKEND\" -c \"bgBlue,bgYellow\" -p \"[{name}]\" \"npm run start-frontend\" \"npm run start-backend\"",
     "install-frontend": "cd frontend && npm i",
